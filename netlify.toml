@@ -1,7 +1,0 @@
-# Cấu hình cho Netlify khi kết nối với kho GitHub.
-[build]
-  command = "npm run build"
-  publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "22"

@@ -152,12 +152,11 @@ và mọi đáp án trong file đều được bộ chấm chấp nhận. Nếu 
 
 ## 3. Web đang chạy ở đâu và cách cập nhật
 
-- Link cho học sinh: **https://englishpractice4727.netlify.app**
+- Link cho học sinh: **https://tonthatbaothinh2-hash.github.io/English-practice/**
 - Code: **https://github.com/tonthatbaothinh2-hash/English-practice** (nhánh `main`)
 
-Site Netlify được nối với repo GitHub. Mỗi lần đẩy code mới lên nhánh `main`, Netlify tự chạy `npm run build`
-(chạy test trước rồi mới build, cấu hình trong `netlify.toml`) và cập nhật link sau khoảng 1 phút.
-Nếu test hỏng, Netlify không cập nhật và link vẫn giữ bản cũ; xem lỗi ở tab **Deploys** trên Netlify.
+Mỗi lần đẩy code lên nhánh `main`, workflow `.github/workflows/deploy.yml` tự chạy test, build và đưa web lên
+GitHub Pages (khoảng 1–2 phút). Nếu test hỏng, web không bị cập nhật và giữ bản cũ; xem lỗi ở tab **Actions** của repo.
 
 Cập nhật sau khi sửa câu hỏi:
 
@@ -177,11 +176,7 @@ git commit -m "Thêm câu hỏi chủ đề ..."
 git push
 ```
 
-**Nối Netlify với GitHub (làm một lần):** trên Netlify, mở site → **Site configuration → Build & deploy →
-Continuous deployment → Link repository**, chọn GitHub và repo `English-practice`. Netlify tự đọc cấu hình từ `netlify.toml`.
-
-**Dự phòng: GitHub Pages.** Workflow `.github/workflows/deploy.yml` đưa web lên GitHub Pages khi bấm tay
-(tab **Actions → Deploy to GitHub Pages → Run workflow**), sau khi bật **Settings → Pages → Source: GitHub Actions**.
+Bật GitHub Pages (chỉ làm một lần, đã làm): **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 
 ---
 

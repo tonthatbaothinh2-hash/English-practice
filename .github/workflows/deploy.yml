@@ -1,12 +1,10 @@
-# Dự phòng: đưa web lên GitHub Pages. Web hiện chạy trên Netlify nên workflow này chỉ chạy khi bấm tay
-# (tab Actions → Deploy to GitHub Pages → Run workflow).
-# Muốn dùng GitHub Pages thay Netlify: bật Settings → Pages → Source: GitHub Actions, rồi thêm
-#   push:
-#     branches: [main]
-# vào dưới "on:".
+# Tự chạy test, build và đưa web lên GitHub Pages mỗi khi đẩy code lên nhánh main.
+# Cần bật một lần: Settings → Pages → Build and deployment → Source: GitHub Actions.
 name: Deploy to GitHub Pages
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
