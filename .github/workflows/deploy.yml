@@ -1,0 +1,44 @@
+# Dự phòng: đưa web lên GitHub Pages. Web hiện chạy trên Netlify nên workflow này chỉ chạy khi bấm tay
+# (tab Actions → Deploy to GitHub Pages → Run workflow).
+# Muốn dùng GitHub Pages thay Netlify: bật Settings → Pages → Source: GitHub Actions, rồi thêm
+#   push:
+#     branches: [main]
+# vào dưới "on:".
+name: Deploy to GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build   # chạy test trước, test hỏng thì không đưa lên
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

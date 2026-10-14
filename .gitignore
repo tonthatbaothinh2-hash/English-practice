@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.vite/
+*.log
+.DS_Store
+
+# Cấu hình chạy thử riêng của máy này
+.claude/

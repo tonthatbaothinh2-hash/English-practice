@@ -1,0 +1,89 @@
+{
+  "exercises": [
+    {
+      "id": "word-form-mc",
+      "name": "Dạng từ: trắc nghiệm",
+      "desc": "Chọn dạng đúng của từ: danh từ, tính từ, trạng từ, động từ.",
+      "filterBy": "topic"
+    },
+    {
+      "id": "word-form-fill",
+      "name": "Dạng từ: điền từ",
+      "desc": "Cho từ gốc trong ngoặc, tự gõ dạng đúng.",
+      "filterBy": "topic"
+    },
+    {
+      "id": "tenses",
+      "name": "Chia động từ theo thì",
+      "desc": "Hiện tại đơn, hiện tại tiếp diễn, quá khứ đơn, tương lai. Có cả chọn và điền.",
+      "filterBy": "topic"
+    },
+    {
+      "id": "verb-patterns",
+      "name": "Cấu trúc với động từ",
+      "desc": "V-ing hay to V, can/should/must, động từ sau giới từ.",
+      "filterBy": "topic"
+    },
+    {
+      "id": "error-id",
+      "name": "Tìm lỗi sai",
+      "desc": "Chọn phần gạch chân bị sai trong câu.",
+      "filterBy": "group"
+    }
+  ],
+  "groups": [
+    { "id": "word-form", "name": "Dạng từ" },
+    { "id": "tenses", "name": "Thì của động từ" },
+    { "id": "verb-patterns", "name": "Cấu trúc động từ" }
+  ],
+  "topics": [
+    {
+      "id": "noun", "group": "word-form", "name": "Danh từ",
+      "tip": "Danh từ thường đứng sau a/an/the, my/your/her/his, sau tính từ, hoặc sau giới từ. Cũng có thể làm chủ ngữ ở đầu câu. Đuôi -er/-or/-ist thường chỉ người."
+    },
+    {
+      "id": "adj", "group": "word-form", "name": "Tính từ",
+      "tip": "Tính từ đứng trước danh từ, hoặc sau be/look/feel/seem để miêu tả người và vật. Người cảm thấy thì dùng -ed, vật gây ra cảm giác thì dùng -ing. Tiền tố un- tạo nghĩa trái ngược."
+    },
+    {
+      "id": "adv", "group": "word-form", "name": "Trạng từ",
+      "tip": "Trạng từ (thường là tính từ + -ly) bổ nghĩa cho động từ, đứng cuối câu hoặc ngay trước tính từ. Ngoại lệ: good thành well; fast, hard giữ nguyên."
+    },
+    {
+      "id": "verb", "group": "word-form", "name": "Động từ",
+      "tip": "Động từ nguyên mẫu đứng sau to, sau can/should/must/will, sau Let's, hoặc ở đầu câu mệnh lệnh. Đuôi -en, -ize, -ify thường tạo động từ."
+    },
+    {
+      "id": "present-simple", "group": "tenses", "name": "Hiện tại đơn",
+      "tip": "Thói quen, sự thật: always, usually, often, every day. Chủ ngữ he/she/it thì động từ thêm -s/-es; phủ định và nghi vấn dùng does/doesn't + động từ nguyên mẫu."
+    },
+    {
+      "id": "present-continuous", "group": "tenses", "name": "Hiện tại tiếp diễn",
+      "tip": "Việc đang xảy ra: now, at the moment, Look!, Listen!. Cấu trúc: am/is/are + V-ing."
+    },
+    {
+      "id": "past-simple", "group": "tenses", "name": "Quá khứ đơn",
+      "tip": "Việc đã xong trong quá khứ: yesterday, last week, ago, in 2020. Động từ thêm -ed hoặc dùng cột 2 bất quy tắc; phủ định và nghi vấn dùng did/didn't + động từ nguyên mẫu."
+    },
+    {
+      "id": "future-will", "group": "tenses", "name": "Tương lai với will",
+      "tip": "Quyết định ngay lúc nói, lời hứa, dự đoán: will + động từ nguyên mẫu. Phủ định: won't. Hay đi với I think, probably, tomorrow."
+    },
+    {
+      "id": "future-going-to", "group": "tenses", "name": "Tương lai với be going to",
+      "tip": "Kế hoạch đã định trước hoặc dự đoán có dấu hiệu rõ: am/is/are going to + động từ nguyên mẫu."
+    },
+    {
+      "id": "ving-or-tov", "group": "verb-patterns", "name": "V-ing hay to V",
+      "tip": "Sau enjoy, like, love, hate, finish, mind, practise, stop dùng V-ing. Sau want, decide, hope, plan, need, would like, learn dùng to V."
+    },
+    {
+      "id": "modals", "group": "verb-patterns", "name": "can / should / must",
+      "tip": "Sau can, could, should, must dùng động từ nguyên mẫu không có to, không thêm -s. Can: có thể; should: nên; must: phải; mustn't: cấm."
+    },
+    {
+      "id": "after-prep", "group": "verb-patterns", "name": "Động từ sau giới từ",
+      "tip": "Sau giới từ (in, at, of, about, for, before, after, without...) động từ phải ở dạng V-ing: good at drawing, interested in reading."
+    }
+  ]
+}
